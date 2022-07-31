@@ -14,18 +14,76 @@ body{
 }
 
 .grid-container > * {
-    box-shadow: -1px 1px 7px 0px black;
     border-radius: 4px;
     padding: 10px;
     text-align: center;
 }
 
+.header {
+    grid-area: header;
+    background-color: blue;
+}
+.headerTex{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(255, 255, 255);
+}
+
+.ulMain{
+    list-style: none;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(255, 1, 1);
+}
+
+.texFooter{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .grid-container{
     display: grid;
-    gap: 10px;
-    grid-template-areas:  
-     "header"
-     "main"
-     "sidebar"
-     "footer";
+    grid-template:  
+     "header"   100px
+     "navbar"   50px
+     "main"     auto
+     "sidebar"  100px
+     "footer"   100px;
+}
+
+@media (min-width: 600px){
+    .grid-container {
+         grid-template: 
+         "header header" 100px
+         "navbar navbar" 50px
+         "sidebar main"  auto
+         "footer footer" 100px /
+         200px   auto;
+    }
+}
+
+@media (min-width: 900px){
+    .grid-container {
+         grid-template: 
+         "header header header"  100px
+         "navbar main   sidebar" auto
+         "footer footer footer"  100px /
+         200px   auto   200px;
+    }
 }
