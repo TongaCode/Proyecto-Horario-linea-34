@@ -28,16 +28,6 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navbar {
-    grid-area: navbar;
-    background-color: white;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: white;
-}
-
 .main {
     grid-area: main;
     background-color: rgb(255, 255, 255);
