@@ -10,8 +10,12 @@ html {
 }
 
 body{
-    font-size: 1.2rem;
     min-height: 100%;
+}
+img{
+    max-width: 100px;
+    
+    float: left;
 }
 
 .grid-container > * {
@@ -26,6 +30,8 @@ body{
 }
 .headerTex{
     color: white;
+    margin-left: 10%;
+    margin-right: 11%;
 }
 
 .main {
